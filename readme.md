@@ -1,17 +1,11 @@
 #slonit
 
 ##git commands
-\--
-git init
-\--
+`git init`
 инициализирует git для работы
 
-\--
-git add
-\--
+`git add`
 добаляет файлы в индекс
 
-\--
-git commit
-\--
+`git commit`
 делает commit т.е добавляет файлы в repository
