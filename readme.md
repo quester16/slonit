@@ -1,6 +1,7 @@
-#slonit
+# slonit
 
-##git commands
+## git commands
+
 `git init`
 инициализирует git для работы
 
