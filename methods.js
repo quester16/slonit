@@ -62,3 +62,11 @@ function myIncludes(arr, item, from) {
 }
 // const newArr = myIncludes(arr, -1);
 // console.log(newArr);
+
+function myFilter(arr, callback) {
+  const resArr = [];
+  arr.forEach((item) => {
+    if (callback(item)) resArr.push(item);
+  });
+  return resArr;
+}
