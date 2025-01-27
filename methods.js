@@ -70,3 +70,34 @@ function myFilter(arr, callback) {
   });
   return resArr;
 }
+
+// objects
+const obj = { name: "Vasya", friends: 5, likes: 19, projects: 7 };
+
+function summ(object) {
+  let res = 0;
+  for (const key in object) {
+    if (Object.prototype.hasOwnProperty.call(object, key)) {
+      const element = object[key];
+      if (typeof element === "number") res += element;
+    }
+  }
+  return res;
+}
+// console.log(summ(obj));
+
+function arrOfKeys(object) {
+  const keys = [];
+  for (const key in object) {
+    if (Object.prototype.hasOwnProperty.call(object, key)) {
+      const element = object[key];
+      if (typeof element === "number") keys.push(key);
+    }
+  }
+  keys.sort()
+  for (let i = 0; i <= keys.length; i++) {
+    console.log(object[keys[i]])
+  }
+  // return keys.length
+}
+console.log(arrOfKeys(obj));
