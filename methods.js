@@ -87,17 +87,10 @@ function summ(object) {
 // console.log(summ(obj));
 
 function arrOfKeys(object) {
-  const keys = [];
-  for (const key in object) {
-    if (Object.prototype.hasOwnProperty.call(object, key)) {
-      const element = object[key];
-      if (typeof element === "number") keys.push(key);
-    }
-  }
-  keys.sort()
-  for (let i = 0; i <= keys.length; i++) {
-    console.log(object[keys[i]])
-  }
+  return Object.entries(object)
+    .filter(([key, item]) => typeof item === "number")
+    .sort((a, b) => b[1] - a[1])
+    .map(([key]) => key);
   // return keys.length
 }
 console.log(arrOfKeys(obj));
